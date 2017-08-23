@@ -51,8 +51,7 @@ namespace Vuforia
                 newStatus == TrackableBehaviour.Status.TRACKED ||
                 newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
             {
-                if (PhotonNetwork.connected)
-                    OnTrackingFound();
+                OnTrackingFound();
             }
             else
             {
