@@ -51,6 +51,10 @@ namespace BeardedManStudios.Forge.Networking.Generated
 						availableCallback = true;
 						obj = new DuckNetworkObject(networker, id, frame);
 						break;
+					case DuckControllerNetworkObject.IDENTITY:
+						availableCallback = true;
+						obj = new DuckControllerNetworkObject(networker, id, frame);
+						break;
 				}
 
 				if (!availableCallback)

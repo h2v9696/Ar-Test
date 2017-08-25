@@ -44,7 +44,7 @@ public class GetTexture : MonoBehaviour
 
 
     void LateUpdate()
-    {k
+    {
 
         if (FreezeEnable && monobehaviour.MarkerIsOUT)
             RenderTextureCamera.enabled = false;

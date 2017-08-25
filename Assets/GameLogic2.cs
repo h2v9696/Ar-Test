@@ -7,7 +7,7 @@ public class GameLogic2 : MonoBehaviour
     public GameObject regionCapture;
     private void Start()
     {
-        var go = NetworkManager.Instance.InstantiateDuck ();
+        var go = NetworkManager.Instance.InstantiateDuckController ();
         go.gameObject.GetComponent<GetTexture> ().Region_Capture = regionCapture;
     }
 }
