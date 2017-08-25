@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class GetTexture : MonoBehaviour
@@ -32,21 +32,19 @@ public class GetTexture : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-//		if (RenderTextureCamera.targetTexture) {
-//			GetComponent<Renderer> ().material.SetTexture ("_MainTex", RenderTextureCamera.targetTexture);
-//		}
-
         if (RenderTextureCamera.targetTexture)
         {
             GetComponent<Renderer> ().material.SetTexture ("_MainTex", RenderTextureCamera.targetTexture);
         }
-
+        else
+            StartCoroutine (WaitForTexture ());
 
     }
 
 
+
     void LateUpdate()
-    {
+    {k
 
         if (FreezeEnable && monobehaviour.MarkerIsOUT)
             RenderTextureCamera.enabled = false;
